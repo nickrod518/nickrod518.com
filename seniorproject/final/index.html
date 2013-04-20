@@ -1,0 +1,85 @@
+<!--
+Nick Rodriguez
+20 April 2013
+
+adapted from: https://github.com/mrdoob/three.js/blob/master/examples/webgl_loader_obj_mtl.html
+
+contains main web page which displays scene and toolbar
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>A-Head of WebGL</title>
+    <meta name="author" content="Nick Rodriguez" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+
+    <!-- bar across top used to hide toolbar -->
+    <div id="toolbarButton" onclick="toggleToolbar()">Hide Toolbar</div>
+
+		<!-- toolbar at top with view tools -->
+		<div id="toolbar" style="display:block;">
+
+      <!-- table is used for alignment of toolbar items -->
+      <table> 
+        <tr>
+          <td style="text-align:right;">Model</td>
+          <td>
+            <select id="model">
+              <option value="RandomMale">Random Male</option>
+		          <option value="RandomFemale">Random Female</option>
+              <option value="DrMec">Dr. Mec</option>
+              <option value="YoungMan">Young Man</option>
+              <option value="HippyGirl">Hippy Girl</option>
+		        </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align:right;">Free Look</td>
+          <td><input type="checkbox" id="freeLook" checked /></td>
+        </tr>
+        <tr>
+          <td style="text-align:right;">Zoom</td>
+          <td><input id="zoom" type="range" min="250" max="1000" value="500" onchange="updateZoom(this.value);" /></td>
+        </tr>
+        <tr>
+          <td style="text-align:right;">Sensitivity</td>
+          <td><input id="rotationSensitivity" type="range" min=".1" max="2" step=".1" value="1" onchange="updateRotationSensitivity(this.value);" /></td>
+        </tr>
+        <tr>
+          <td style="text-align:right;">Light</td>
+          <td>
+            <input id="brightness" type="range" min="0" max="30" value="8" onchange="updateLightBrightness(this.value);" />
+            <input id="color" type="color" value="#eee8aa" onchange="updateLightColor(this.value);" />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button onclick="reset()">Reset</button>
+            <button onclick="instructionsPopup()">Instructions</button>
+          </td>
+        </tr>
+      </table>
+
+		</div>
+    
+    <!-- three.js libraries taken from http://mrdoob.github.com/three.js/ -->
+		<script src="js/three.js"></script>
+		<script src="js/MTLLoader.js"></script>
+		<script src="js/OBJMTLLoader.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/stats.min.js"></script>
+    
+    <!-- my script, containing scene, model loading, camera, lighting functions, etc. -->
+    <script src="js/draw.js"></script>
+
+	</body>
+
+</html>

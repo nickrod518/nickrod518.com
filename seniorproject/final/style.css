@@ -1,0 +1,53 @@
+/*
+Nick Rodriguez
+20 April 2013
+
+stylesheet
+*/
+
+body {
+	font-family: monospace;
+	background-color: #000;
+	color: #fff;
+	margin: 0px;
+	overflow: hidden;
+}
+
+/* bar across top used for hiding toolbar */
+#toolbarButton {
+  position: absolute;
+  background-color: #212121;
+  opacity: .8;
+	color: #fff;
+  padding-top: 3px;
+	width: 100%;
+  height: 20px;
+	text-align: center;
+  box-shadow: 0px 0px 5px 0px #808080;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* effect when hovering over toolbarButton */
+#toolbarButton:hover {
+  background-color: #000;
+}
+
+/* hideable container for toolbar items */
+#toolbar {
+  background-color: #212121;
+  opacity: .8;
+	color: #fff;
+	position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+	top: 22px;
+	width: 300px;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 5px 0px #808080;
+  z-index: 1;
+}

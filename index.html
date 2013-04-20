@@ -1,0 +1,135 @@
+﻿<!doctype html>
+
+<head>
+
+  <title>Nick Rodriguez's Corner</title>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30314487-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+  <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+
+  <script type="text/javascript" src="draw.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Nick Rodriguez</h1>
+
+  <h2>A little bit about myself</h2>
+
+
+
+  <p>I'm a computer science major at UNC Asheville. I enjoy pc gaming, technology, music (listening, writing, performing, recording), concerts, spicy food, snowboarding, long walks in the forest, computers (building, fixing, special purposing), smiling, snow, and relaxing.</p><br />
+
+
+
+  <ul><h2>Programming and web stuff</h2>
+
+    <li><a href="https://github.com/nickrod518">GitHub</a></li>
+
+    <li><a href="http://www.jumpshiprecords.com">Jump Ship Records</a></li>
+
+    <li><a href="http://www.drplawfirm.com">DRP Law Firm</a></li>
+
+    <li><a href="seniorproject">Senior Project (work in progress)</a></li>
+
+  </ul><br />
+
+
+
+  <ul><h2>Music stuff</h2>
+
+    <li><a href="http://youtu.be/ZgeYKPbEyHg">Comet West Music Video</a></li>
+
+    <li><a href="http://cometwest.bandcamp.com/">Comet West Demo</a></li>
+
+    <li><a href="http://youtu.be/yzt6mBRhAs0">Elkmont Place Music Video</a></li>
+
+    <li><a href="http://elkmontplace.bandcamp.com/">Elkmont Place Demo</a></li>
+
+  </ul><br />
+
+
+
+  <h2>Something to pass the time</h2>
+
+  <p>I created this little paint widget entirely with HTML5 canvas and JavaScript. It may be your only opportunity to draw on my face, so take advantage!</p><br />
+
+
+
+  <p class="controls">
+
+  Picture
+
+  <select id="picture">
+
+    <option value="hike.jpg">hike</option>
+
+    <option value="car.jpg">car</option>
+
+    <option value="rpg.jpg">rpg</option>
+
+    <option value="gun.jpg">gun</option>
+
+    <option value="drums.jpg">drums</option>
+
+  </select>
+
+  Tools
+
+  <select id="tools">
+
+    <option value="brush">brush</option>
+
+    <option value="line">line</option>
+
+    <option value="circle">circle</option>
+
+    <option value="rectangle">rectangle</option>
+
+  </select>
+
+  Color
+
+  <input id="color" type="color" value="white"/>
+
+  <br />
+
+  Width
+
+  <input id="width" type="range" min="1" max="100" value="3"/>
+
+  <br />
+
+  <input id="clear" type="button" value="clear"/>
+
+  <input id="save" type="button" value="save"/>
+
+  </p>
+
+  <br />
+
+  <canvas width="500" height="500" id="canvas" style="box-shadow:0px 0px 1px 1px #fff;">
+
+    If you can read this, then your browser does not support HTML5 Canvas or JavaScript. :(
+
+  </canvas>
+
+</body>
+
+</html>
